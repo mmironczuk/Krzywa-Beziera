@@ -7,6 +7,44 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.RowSpan="7">
+            <Label Margin="2">Stopien</Label>
+            <TextBox Margin="2" Name="DegreeTB"></TextBox>
+            <Button Margin="2" Name="DegreeButton" Click="DegreeButton_OnClick">Stopień</Button>
+            <Label Margin="2">X</Label>
+            <TextBox Margin="2" Name="XTextBox"></TextBox>
+            <Label Margin="2">Y</Label>
+            <TextBox Margin="2" Name="YTextBox"></TextBox>
+            <Button Margin="2" Name="AddButton" Click="AddButton_OnClick">Dodaj</Button>
+            <Label Margin="2">X</Label>
+            <TextBox Margin="2" Name="XChangeTextBox"></TextBox>
+            <Label Margin="2">Y</Label>
+            <TextBox Margin="2" Name="YChangeTextBox"></TextBox>
+            <Button Margin="2" Name="ChangeButton" Click="ChangeButton_OnClick">Przesunięcie</Button>
+            <Button Margin="2" Name="CleanButton" Click="CleanButton_OnClick">Czyszczenie</Button>
+        </StackPanel>
+
+        <Canvas Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="7" Name="CanvasArea" Background="Transparent" MouseDown="CanvasArea_OnMouseDown" MouseMove="CanvasArea_OnMouseMove" MouseUp="CanvasArea_OnMouseUp">
+        </Canvas>
     </Grid>
 </Window>
